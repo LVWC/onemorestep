@@ -88,16 +88,11 @@
                     2：医疗类
                     3：法术类
                     4：防御类
-    quality：装备品质，分为4档。
-                    注意：这里的装备品质不一定代表越大越厉害，更多的是一个前后期装备的区分。
-                    比如，你有一个装备，增加固定攻击力100，那么他可能是2或者3
-                             另一个装备是增加50%攻击力的装备，那么他可能是3或4；
     max：代表了敌人最多会携带几件这个装备，比如游戏本体中的刺客面具，这个值为1，因为带多了也没用。
-
 
 ## 7、技能说明
     技能格中可以填写多个技能，用“|”进行分隔。
-    如：default,1,0:21002,50|default,1,0:20004,1   代表该角色或装备默认拥有21002及20004两个技能 
+    如：default,1,0:20030,50|default,1,0:30031,1   代表该角色或装备默认拥有21002及20004两个技能 
     单个技能的规则如下：
         技能由两部分构成：
         1、触发条件
@@ -126,6 +121,26 @@
             自爆：onDeath,1:60014,50                 死亡时，立即对敌方造成自身最大生命值50%的神圣伤害。
             开矿：perXRoundPre,1:60018,2             每1回合开始时候,立即获得2个金币
         通过条件和技能，可以灵活组合出来各种各样的技能。如果觉得官方文案过于正式，可以通过skillDescs-zh或者其他语言字段自行进行技能说明
+        
+        组合注意事项：
+            下面技能表格中有需要目标的技能，只可作用于以下与其他角色有交互的条件中：
+                everyUnderNormalAttack	每受到{s1}次物理攻击，
+                underNormalAttackTimes	累计受到{s1}次物理攻击，
+                everyUnderMaigcAttack	每受到{s1}次法术攻击，
+                underMaigcAttackTimes	累计受到{s1}次法术攻击，
+                everyUnderAttack	每受到{s1}次任意攻击，
+                underAttackTimes	累计受到{s1}次任意攻击，
+                avoidTimes	成功闪避{s1}次后，
+                everyAvoid	每成功闪避{s1}次，
+                everyNormalAttack	每进行{s1}次物理攻击，
+                everyMagicAttack	每进行{s1}次法术攻击，
+                normalAttackTimes	{s1}次物理攻击后，
+                maigcAttackTimes	{s1}次法术攻击后，
+                everyKillEnemy	每杀死{s1}个敌人，
+                killEnemyCount	杀死{s1}个敌人后，
+                onDeath	濒临死亡时，
+                onEveryCure	每治疗{s1}个单位，
+                onCureTimes	累计治疗{s1}个单位，
 
 ## 8、现有资源
 
