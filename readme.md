@@ -174,6 +174,7 @@ maigcAttackTimes,2	|	2次法术攻击后	|		|
 everyKillEnemy,2	|	每杀死2个敌人	|		|
 killEnemyCount,2	|	杀死2个敌人后	|		|
 onDeath,1	|	濒临死亡时	|		|
+onFriendDeath,1 |每1个友军濒临死亡时，| 
 onEveryCure,2	|	每治疗2个单位	|		|
 onCureTimes,2	|	累计治疗2个单位	|		|
 
