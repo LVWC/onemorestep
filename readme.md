@@ -129,8 +129,8 @@
             下面技能表格中有需要目标的技能，只可作用于以下与其他角色有交互的条件中：
                 everyUnderNormalAttack	每受到{s1}次物理攻击，
                 underNormalAttackTimes	累计受到{s1}次物理攻击，
-                everyUnderMaigcAttack	每受到{s1}次法术攻击，
-                underMaigcAttackTimes	累计受到{s1}次法术攻击，
+                everyUnderMagicAttack	每受到{s1}次法术攻击，
+                underMagicAttackTimes	累计受到{s1}次法术攻击，
                 everyUnderAttack	每受到{s1}次任意攻击，
                 underAttackTimes	累计受到{s1}次任意攻击，
                 avoidTimes	成功闪避{s1}次后，
