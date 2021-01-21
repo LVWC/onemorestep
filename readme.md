@@ -138,7 +138,7 @@
                 everyNormalAttack	每进行{s1}次物理攻击，
                 everyMagicAttack	每进行{s1}次法术攻击，
                 normalAttackTimes	{s1}次物理攻击后，
-                maigcAttackTimes	{s1}次法术攻击后，
+                magicAttackTimes	{s1}次法术攻击后，
                 everyKillEnemy	每杀死{s1}个敌人，
                 killEnemyCount	杀死{s1}个敌人后，
                 onDeath	濒临死亡时，
