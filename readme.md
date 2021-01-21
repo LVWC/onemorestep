@@ -175,8 +175,8 @@ battleWithActor,	|	与{s1}同时上场	|	参数为其他角色的id	|
 battleWithItem,	|	装备{s1}	|	参数为装备的id	|
 everyUnderNormalAttack,2	|	每受到2次物理攻击	|		|
 underNormalAttackTimes,2	|	累计受到2次物理攻击	|		|
-everyUnderMaigcAttack,2	|	每受到2次法术攻击	|		|
-underMaigcAttackTimes,2	|	累计受到2次法术攻击	|		|
+everyUnderMagicAttack,2	|	每受到2次法术攻击	|		|
+underMagicAttackTimes,2	|	累计受到2次法术攻击	|		|
 everyUnderAttack,2	|	每受到2次任意攻击	|		|
 underAttackTimes,2	|	累计受到2次任意攻击	|		|
 perXRoundPre,3	|	每3回合开始时	|		|
@@ -189,7 +189,7 @@ everyAvoid,1	|	每成功闪避1次	|		|
 everyNormalAttack,2	|	每进行2次物理攻击	|		|
 everyMagicAttack,2	|	每进行2次法术攻击	|		|
 normalAttackTimes,2	|	2次物理攻击后	|		|
-maigcAttackTimes,2	|	2次法术攻击后	|		|
+magicAttackTimes,2	|	2次法术攻击后	|		|
 everyKillEnemy,2	|	每杀死2个敌人	|		|
 killEnemyCount,2	|	杀死2个敌人后	|		|
 onDeath,1	|	濒临死亡时	|		|
