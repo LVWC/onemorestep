@@ -123,24 +123,8 @@
         通过条件和技能，可以灵活组合出来各种各样的技能。如果觉得官方文案过于正式，可以通过skillDescs-zh或者其他语言字段自行进行技能说明
         
         组合注意事项：
-            下面技能表格中有需要目标的技能，只可作用于以下与其他角色有交互的条件中：
-                everyUnderNormalAttack	每受到{s1}次物理攻击，
-                underNormalAttackTimes	累计受到{s1}次物理攻击，
-                everyUnderMagicAttack	每受到{s1}次法术攻击，
-                underMagicAttackTimes	累计受到{s1}次法术攻击，
-                everyUnderAttack	每受到{s1}次任意攻击，
-                underAttackTimes	累计受到{s1}次任意攻击，
-                avoidTimes	成功闪避{s1}次后，
-                everyAvoid	每成功闪避{s1}次，
-                everyNormalAttack	每进行{s1}次物理攻击，
-                everyMagicAttack	每进行{s1}次法术攻击，
-                normalAttackTimes	{s1}次物理攻击后，
-                magicAttackTimes	{s1}次法术攻击后，
-                everyKillEnemy	每杀死{s1}个敌人，
-                killEnemyCount	杀死{s1}个敌人后，
-                onDeath	濒临死亡时，
-                onEveryCure	每治疗{s1}个单位，
-                onCureTimes	累计治疗{s1}个单位，
+            技能表格中有需要目标的技能，只可与存在目标的条件形成组合
+      
 ## 8、如何生成到游戏
     当你将Excel文档配置完成之后，进入游戏，点击设置 创意工坊，在出现的界面中输入你的根目录名，点击生成即可。如果发生错误，请按照提示进行修改。
     生成成功后，你的目录下会多出来三个json文件，分别代表职业，角色以及装备的配置
@@ -165,34 +149,34 @@
 
 **触发条件：**
 
-举例 | 效果| 备注
+举例 | 效果|目标| 备注
 :----------- | :----------- | :-----------
-default,1	|	入场生效	|	无参数，填1	|
-battleWithActor,	|	与{s1}同时上场	|	参数为其他角色的id	|
-battleWithItem,	|	装备{s1}	|	参数为装备的id	|
-everyUnderNormalAttack,2	|	每受到2次物理攻击	|		|
-underNormalAttackTimes,2	|	累计受到2次物理攻击	|		|
-everyUnderMagicAttack,2	|	每受到2次法术攻击	|		|
-underMagicAttackTimes,2	|	累计受到2次法术攻击	|		|
-everyUnderAttack,2	|	每受到2次任意攻击	|		|
-underAttackTimes,2	|	累计受到2次任意攻击	|		|
-perXRoundPre,3	|	每3回合开始时	|		|
-perXRoundAfter,3	|	每3回合结束时	|		|
-roundBegin,3	|	第3回合开始阶段	|		|
-roundAfter,3	|	第3回合结束阶段	|		|
-lifeBelow,50	|	生命值低于50%时	|		|
-avoidTimes,5	|	成功闪避5次后	|		|
-everyAvoid,1	|	每成功闪避1次	|		|
-everyNormalAttack,2	|	每进行2次物理攻击	|		|
-everyMagicAttack,2	|	每进行2次法术攻击	|		|
-normalAttackTimes,2	|	2次物理攻击后	|		|
-magicAttackTimes,2	|	2次法术攻击后	|		|
-everyKillEnemy,2	|	每杀死2个敌人	|		|
-killEnemyCount,2	|	杀死2个敌人后	|		|
-onDeath,1	|	濒临死亡时	|		|
-onFriendDeath,1 |每1个友军濒临死亡时，| 
-onEveryCure,2	|	每治疗2个单位	|		|
-onCureTimes,2	|	累计治疗2个单位	|		|
+default,1	|	入场生效	|无|	无参数，填1	|
+battleWithActor,	|	与{s1}同时上场	|无|	参数为其他角色的id	|
+battleWithItem,	|	装备{s1}	|无|	参数为装备的id	|
+everyUnderNormalAttack,2	|	每受到2次物理攻击	|最后一次造成伤害的敌方|		|
+underNormalAttackTimes,2	|	累计受到2次物理攻击	|最后一次造成伤害的敌方|		|
+everyUnderMagicAttack,2	|	每受到2次法术攻击	|	最后一次造成伤害的敌方|	|
+underMagicAttackTimes,2	|	累计受到2次法术攻击	|	最后一次造成伤害的敌方|	|
+everyUnderAttack,2	|	每受到2次任意攻击	|	最后一次造成伤害的敌方|	|
+underAttackTimes,2	|	累计受到2次任意攻击	|	最后一次造成伤害的敌方|	|
+perXRoundPre,3	|	每3回合开始时	|	无|	|
+perXRoundAfter,3	|	每3回合结束时	|无|		|
+roundBegin,3	|	第3回合开始阶段	|	无|	|
+roundAfter,3	|	第3回合结束阶段	|	无|	|
+lifeBelow,50	|	生命值低于50%时	|	无|	|
+avoidTimes,5	|	成功闪避5次后	|	最后一次造成伤害的敌方|	|
+everyAvoid,1	|	每成功闪避1次	|	最后一次造成伤害的敌方|	|
+everyNormalAttack,2	|	每进行2次物理攻击	|	最后一次造成伤害的敌方|	|
+everyMagicAttack,2	|	每进行2次法术攻击	|	最后一次造成伤害的敌方|	|
+normalAttackTimes,2	|	2次物理攻击后	|	最后一次造成伤害的敌方|	|
+magicAttackTimes,2	|	2次法术攻击后	|	最后一次造成伤害的敌方|	|
+everyKillEnemy,2	|	每杀死2个敌人	|	最后一次造成伤害的敌方|	|
+killEnemyCount,2	|	杀死2个敌人后	|	最后一次造成伤害的敌方|	|
+onDeath,1	|	濒临死亡时	|	最后一次造成伤害的敌方|	|
+onFriendDeath,1 |每1个友军濒临死亡时，| 最后一次造成伤害的敌方|
+onEveryCure,2	|	每治疗2个单位	|		被治疗目标||
+onCureTimes,2	|	累计治疗2个单位	|	被治疗目标|	|
 
 **技能：**
 常规技能类：
